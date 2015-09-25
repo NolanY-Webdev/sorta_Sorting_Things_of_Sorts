@@ -1,0 +1,3 @@
+function insertionSorter(array) {
+
+}
