@@ -67,7 +67,7 @@ describe('quickSorter', function() {
   it('should return arrays', function() {
     var newRay = [0, 1, 2, 3, 8, 4, 5];
     var sortedNewRay = quickSorter(newRay);
-    expect(newRay.length).to.equal(sortedNewRay.length);
+    expect(sortedNewRay).to.be.a('array');
   });
   it('should properly sort arrays', function () {
     var newRay = [0, 1, 2, 3, 8, 4, 5];
