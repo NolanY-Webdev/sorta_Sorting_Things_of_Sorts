@@ -4,7 +4,7 @@ function mergeSorter(array) {
   var rayray = [];
   while (i < array.length) {
     if (array[i + 1] === void(0)) {
-      rayray[n] = array[i];
+      rayray[n] = [array[i]];
     } else {
       if (array[i] < array[i + 1]) {
         rayray[n] = [array[i], array[i + 1]];
@@ -26,9 +26,10 @@ function mergeSorter(array) {
       var n1 = 0;
       var n2 = 0;
       if (array[i + 1] === void(0)) {
-        while (n1 < array[i].length)
-        mergedRay[mRnum].push(array[i][n1]);
-        n1++;
+        while (n1 < array[i].length) {
+          mergedRay[mRnum].push(array[i][n1]);
+          n1++;
+        }
       } else {
         while (n1 + n2 < array[i].length + array[i + 1].length) {
           if (n1 === array[i].length || n2 === array[i + 1].length) {
@@ -46,7 +47,7 @@ function mergeSorter(array) {
           } else if (array[i][n1] > array[i + 1][n2]) {
             mergedRay[mRnum].push(array[i + 1][n2]);
             n2++;
-          } else if (array[i][n1] < array[i + 1][n2]) {
+          } else if (array[i][n1] <= array[i + 1][n2]) {
             mergedRay[mRnum].push(array[i][n1]);
             n1++;
           }
