@@ -17,7 +17,6 @@ function mergeSorter(array) {
   }
 
   function mergeIt(array) {
-    debugger;
     var i = 0;
     var mRnum = 0;
     var mergedRay = [];
@@ -58,7 +57,6 @@ function mergeSorter(array) {
       i += 2;
     }
     if (mergedRay.length === 1) {
-      console.log(mergedRay[0]);
       return mergedRay[0];
     } else {
       return mergeIt(mergedRay);
@@ -66,6 +64,5 @@ function mergeSorter(array) {
   }
 
   var ending = mergeIt(rayray);
-  console.log(ending);
   return ending;
 }
